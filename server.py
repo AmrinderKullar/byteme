@@ -16,8 +16,8 @@ from aiortc.contrib.media import MediaBlackhole, MediaPlayer, MediaRecorder
 
 ROOT = os.path.dirname(__file__)
 
-import tensorflow as tf
-tf.config.gpu.set_per_process_memory_fraction(0.66)
+# import tensorflow as tf
+#tf.config.gpu.set_per_process_memory_fraction(0.66)
 
 logger = logging.getLogger("pc")
 pcs = set()
