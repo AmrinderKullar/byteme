@@ -162,9 +162,9 @@ async function start() {
             constraints.video = true;
         }
     }
-    if (navigator.mediaDevices.getDisplayMedia) {
-        captureStream = await navigator.mediaDevices.getDisplayMedia();
-    }
+    // if (navigator.mediaDevices.getDisplayMedia) {
+    //     captureStream = await navigator.mediaDevices.getDisplayMedia();
+    // }
 
     if (constraints.audio || constraints.video) {
         if (constraints.video) {
@@ -174,7 +174,7 @@ async function start() {
             stream.getTracks().forEach(function(track) {
                 pc.addTrack(track, stream);
             });
-            pc.addStream(captureStream);
+            // pc.addStream(captureStream);
             return negotiate();
         }, function(err) {
             alert('Could not acquire media: ' + err);
